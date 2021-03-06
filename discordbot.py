@@ -1,7 +1,9 @@
 from discord.ext import commands
 import os
 import traceback
+import discord
 
+client = discord.Client()
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
@@ -20,7 +22,7 @@ async def neko(ctx):
 
 
 # メッセージ受信時に動作する処理
-@bot.command()
+@client.event
 async def on_message(message):
     # メッセージ送信者がBotだった場合は無視する
     if message.author.bot:
@@ -30,4 +32,4 @@ async def on_message(message):
         await message.channel.send('にゃーん')
         
 bot.run(token)
-
+client.run(token)
