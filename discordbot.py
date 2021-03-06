@@ -4,7 +4,7 @@ import traceback
 import discord
 
 client = discord.Client()
-bot = commands.Bot(command_prefix='/')
+#bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
@@ -28,7 +28,7 @@ async def on_message(message):
     if message.author.bot:
         return
     # 「/neko」と発言したら「にゃーん」が返る処理
-    if message.content == '/hi':
+    if message.content == 'hi':
         await message.channel.send('やぁ！')
         
 bot.run(token)
