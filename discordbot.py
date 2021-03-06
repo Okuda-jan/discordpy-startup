@@ -28,8 +28,8 @@ async def on_message(message):
     if message.author.bot:
         return
     # 「/neko」と発言したら「にゃーん」が返る処理
-    if message.content == '/neko':
-        await message.channel.send('にゃーん')
+    if message.content == '/hi':
+        await message.channel.send('やぁ！')
         
 bot.run(token)
 client.run(token)
