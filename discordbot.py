@@ -29,4 +29,4 @@ async def on_message(message):
         await message.channel.send('にゃーん')
  
 bot.run(token)
-client.run(TOKEN)
+client.run(token)
