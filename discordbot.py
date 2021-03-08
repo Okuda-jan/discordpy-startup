@@ -3,8 +3,8 @@ import os
 import traceback
 import discord
 
-client = discord.Client()
-#bot = commands.Bot(command_prefix='/')
+#client = discord.Client()
+bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
@@ -32,4 +32,4 @@ async def on_message(message):
         await message.channel.send('やぁ！')
         
 bot.run(token)
-client.run(token)
+#client.run(token)
